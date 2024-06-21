@@ -62,6 +62,17 @@ Si se deseara desplegar valdría con añadir el siguiente contenido a `docker-co
       - D:/Archivos_uni/TFM/TFMDataLake/src/main/scala/org/tfmupm:/home/datalake
       - D:/Archivos_uni/TFM/TFMDataLake/target:/home
 ```
+### FICHEROS COMPLEMENTARIOS
+
+Además de los ficheros .scala, se encuentran una serie de ficheros que complementan el proyecto. Estos son:
+#### ambulatorio.sh
+Imita el envío de registros ambulatorios a través de NiFi. Para ello hace una petición HTTP a NiFi con un fichero JSON.
+#### continuo.sh
+Imita el envío de registros continuos a través de NiFi. Para ello hace una petición HTTP a NiFi con un fichero JSON.
+#### Visualización.ipynb
+Fichero de Jupyter que permite la visualización de las tablas Delta generadas. En este fichero se pueden consultar los datos de las tablas y generar gráficos con ellos.
+
+
 ### ESTRUCTURA EN DOCKER
 
 El proyecto se compone de varios servicios que se ejecutan en contenedores Docker. Estos servicios son:
@@ -77,6 +88,7 @@ El proyecto se compone de varios servicios que se ejecutan en contenedores Docke
 - `jupyter`: Contenedor con Jupyter para la visualización de los datos.
 
 Estos contenedores están conectados de la siguiente forma:
+
 ![Estructura de los contenedores](/img/arquitectura.png)
 
 ### EJECUCIÓN DEL PROYECTO
@@ -97,7 +109,7 @@ En este fichero se encuentran las importaciones necesarias para poder consultar 
 - Pandas: Para la visualización de los datos.
 - DeltaLake: Para la lectura de las tablas Delta.
 - Matplotlib: Para la generación de gráficos.
-- 
+
 ![Instalación e importación](/img/install_imports.png)
 
 Una vez se han instalado e importado las dependencias necesarias, para visualizar la tabla debe ejecutarse una celda con un contenido similar al siguiente:
