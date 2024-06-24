@@ -1,0 +1,101 @@
+version: '2'
+
+services:
+  spark:
+    image: bitnami/spark:3.5
+    hostname: spark
+    container_name: spark_master
+    environment:
+      - SPARK_MODE=master
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+    ports:
+      - '8080:8080'
+    volumes:
+      - D:/Archivos_uni/TFM/TFMDataLake/src/main/scala/org/tfmupm:/home/datalake
+      - D:/Archivos_uni/TFM/TFMDataLake/target:/home
+  spark-worker-1:
+    image: bitnami/spark:3.5
+    container_name: spark_worker_1
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark:7077
+      - SPARK_WORKER_MEMORY=1G
+      - SPARK_WORKER_CORES=1
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+    volumes:
+      - D:/Archivos_uni/TFM/TFMDataLake/src/main/scala/org/tfmupm:/home/datalake
+      - D:/Archivos_uni/TFM/TFMDataLake/target:/home
+  spark-worker-2:
+    image: bitnami/spark:3.5
+    container_name: spark_worker_2
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark:7077
+      - SPARK_WORKER_MEMORY=1G
+      - SPARK_WORKER_CORES=1
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+    volumes:
+      - D:/Archivos_uni/TFM/TFMDataLake/src/main/scala/org/tfmupm:/home/datalake
+      - D:/Archivos_uni/TFM/TFMDataLake/target:/home
+  spark-submit-kafkareaderwriter:
+    image: bitnami/spark:3.5
+    command: /opt/bitnami/spark/bin/spark-submit --class org.tfmupm.KafkaReaderWriterDocker --packages io.delta:delta-spark_2.12:3.1.0,org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0 --conf "spark.sql.extensions=io.delta.sql.DeltaSparkSessionExtension" --conf "spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog" /home/TFMDataLake-1.0-SNAPSHOT.jar
+    volumes:
+      - D:/Archivos_uni/TFM/TFMDataLake/src/main/scala/org/tfmupm:/home/datalake
+      - D:/Archivos_uni/TFM/TFMDataLake/target:/home
+  spark-submit-bronzetosilver:
+    image: bitnami/spark:3.5
+    command: /opt/bitnami/spark/bin/spark-submit --class org.tfmupm.BronzeToSilverDocker --packages io.delta:delta-spark_2.12:3.1.0 --conf "spark.sql.extensions=io.delta.sql.DeltaSparkSessionExtension" --conf "spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog" /home/TFMDataLake-1.0-SNAPSHOT.jar
+    volumes:
+      - D:/Archivos_uni/TFM/TFMDataLake/src/main/scala/org/tfmupm:/home/datalake
+      - D:/Archivos_uni/TFM/TFMDataLake/target:/home
+    depends_on:
+      - spark-submit-kafkareaderwriter
+  spark-submit-historicaldbtransformer:
+    image: bitnami/spark:3.5
+    command: /opt/bitnami/spark/bin/spark-submit --class org.tfmupm.SparkReadDocker --packages io.delta:delta-spark_2.12:3.1.0 --conf "spark.sql.extensions=io.delta.sql.DeltaSparkSessionExtension" --conf "spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog" /home/TFMDataLake-1.0-SNAPSHOT.jar
+    volumes:
+      - D:/Archivos_uni/TFM/TFMDataLake/src/main/scala/org/tfmupm:/home/datalake
+      - D:/Archivos_uni/TFM/TFMDataLake/target:/home
+  nifi:
+    image: apache/nifi:latest
+    environment:
+      - NIFI_WEB_HTTP_PORT=8443
+    ports:
+      - "8443:8443"
+      - "5050:5050"
+  zookeeper:
+    image: bitnami/zookeeper:latest
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+    ports:
+      - '2181:2181'
+  kafka:
+    image: wurstmeister/kafka:2.12-2.3.0
+    ports:
+      - "9092:9092"
+    environment:
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+      - KAFKA_LISTENERS= PLAINTEXT://kafka:9092
+      - KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1
+      - KAFKA_CREATE_TOPICS=nifitopic:1:1,nificontinuous:1:1
+    depends_on:
+      - zookeeper
+  jupyter:
+    image: jupyter/base-notebook:latest
+    ports:
+      - "8888:8888"
+    volumes:
+      - D:/Archivos_uni/TFM/TFMDataLake/src/main/scala/org/tfmupm:/home/datalake
+    command: start-notebook.sh --NotebookApp.token=''
+

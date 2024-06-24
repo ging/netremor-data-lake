@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2df42432-3dec-47c3-81f6-b657e057bf21" name="Changes" comment="Updated README.md" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2bo1pxf3GXQpwazILbLeUAaZ5Jl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BronzeToSilver.executor&quot;: &quot;Run&quot;,
+    &quot;Application.KafkaReaderWriter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SparkRead.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Tester.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ambulatoryReader.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ambulatoryReaderDocker.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.tfmupm/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Archivos_uni/TFM/netremor-data-lake&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Scala&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Archivos_uni\TFM\TFMDataLake" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.tfmupm" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ambulatoryReader">
+    <configuration name="BronzeToSilver" type="Application" factoryName="Application">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.tfmupm.BronzeToSilver" />
+      <module name="TFMDataLake" />
+      <option name="VM_PARAMETERS" value="--add-exports java.base/sun.nio.ch=ALL-UNNAMED" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KafkaReaderWriter" type="Application" factoryName="Application">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.tfmupm.KafkaReaderWriter" />
+      <module name="TFMDataLake" />
+      <option name="VM_PARAMETERS" value="--add-exports java.base/sun.nio.ch=ALL-UNNAMED" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SparkRead" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.tfmupm.SparkRead" />
+      <module name="TFMDataLake" />
+      <option name="VM_PARAMETERS" value="--add-exports java.base/sun.nio.ch=ALL-UNNAMED" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tester" type="Application" factoryName="Application">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.tfmupm.Tester" />
+      <module name="TFMDataLake" />
+      <option name="VM_PARAMETERS" value="--add-exports java.base/sun.nio.ch=ALL-UNNAMED" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ambulatoryReader" type="Application" factoryName="Application" temporary="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.tfmupm.ambulatoryReader" />
+      <module name="netremor-data-lake" />
+      <option name="VM_PARAMETERS" value="--add-exports java.base/sun.nio.ch=ALL-UNNAMED" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ambulatoryReaderDocker" type="Application" factoryName="Application">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.tfmupm.ambulatoryReaderDocker" />
+      <module name="TFMDataLake" />
+      <option name="VM_PARAMETERS" value="--add-exports java.base/sun.nio.ch=ALL-UNNAMED" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="containerName" value="" />
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="tfmupm/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="src/main/scala/org/tfmupm/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.ambulatoryReaderDocker" />
+      <item itemvalue="Application.KafkaReaderWriter" />
+      <item itemvalue="Application.SparkRead" />
+      <item itemvalue="Application.Tester" />
+      <item itemvalue="Application.BronzeToSilver" />
+      <item itemvalue="Application.ambulatoryReader" />
+      <item itemvalue="Docker.Dockerfile" />
+      <item itemvalue="Docker.tfmupm/Dockerfile" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ambulatoryReader" />
+        <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="Docker.tfmupm/Dockerfile" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-corretto-21.0.1-249ae16d76d6-db5fbd5e" />
+        <option value="jdk-21.0.1-corretto-21.0.1-4caba194b151-0837d75e" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2df42432-3dec-47c3-81f6-b657e057bf21" name="Changes" comment="" />
+      <created>1706866805389</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706866805389</updated>
+    </task>
+    <task id="LOCAL-00001" summary="First version">
+      <option name="closed" value="true" />
+      <created>1707325685651</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707325685651</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First version">
+      <option name="closed" value="true" />
+      <created>1707325933528</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707325933528</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Changed grammar">
+      <option name="closed" value="true" />
+      <created>1707393783742</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707393783742</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Created file to read from Kafka and bronze to silver table creator">
+      <option name="closed" value="true" />
+      <created>1708521507331</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708521507331</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Modified silver table creator to create a table for each subject">
+      <option name="closed" value="true" />
+      <created>1713974574418</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713974574418</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Modified silver table creator to create a table for each subject">
+      <option name="closed" value="true" />
+      <created>1714991799904</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714991799904</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added continuous records support">
+      <option name="closed" value="true" />
+      <created>1716198316018</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716198316018</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added Dockerfile">
+      <option name="closed" value="true" />
+      <created>1717145305530</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717145305530</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added docker compose">
+      <option name="closed" value="true" />
+      <created>1717164554591</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717164554591</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added historical db transformation support">
+      <option name="closed" value="true" />
+      <created>1718098597582</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1718098597582</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added new files">
+      <option name="closed" value="true" />
+      <created>1718116221954</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1718116221954</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added new files">
+      <option name="closed" value="true" />
+      <created>1718116249997</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1718116249997</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added new files">
+      <option name="closed" value="true" />
+      <created>1718118226266</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1718118226266</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fixed errors">
+      <option name="closed" value="true" />
+      <created>1718122229245</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1718122229245</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Fixed errors">
+      <option name="closed" value="true" />
+      <created>1718122822667</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1718122822667</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Fixed errors">
+      <option name="closed" value="true" />
+      <created>1718131693940</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1718131693940</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Fixed errors">
+      <option name="closed" value="true" />
+      <created>1718223757241</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1718223757241</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fixed errors">
+      <option name="closed" value="true" />
+      <created>1718225754889</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1718225754889</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Fixed errors">
+      <option name="closed" value="true" />
+      <created>1718227008158</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1718227008158</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Added new columns">
+      <option name="closed" value="true" />
+      <created>1718446084900</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1718446085667</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Added new container to Docker and new files">
+      <option name="closed" value="true" />
+      <created>1718499047896</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1718499047896</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Updated README.md">
+      <option name="closed" value="true" />
+      <created>1718616199481</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1718616199481</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Updated README.md">
+      <option name="closed" value="true" />
+      <created>1718616276715</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1718616276715</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First version" />
+    <MESSAGE value="Changed grammar" />
+    <MESSAGE value="Created file to read from Kafka and bronze to silver table creator" />
+    <MESSAGE value="Modified silver table creator to create a table for each subject" />
+    <MESSAGE value="Added continuous records support" />
+    <MESSAGE value="Added Dockerfile" />
+    <MESSAGE value="Added docker compose" />
+    <MESSAGE value="Added historical db transformation support" />
+    <MESSAGE value="Added new files" />
+    <MESSAGE value="Fixed errors" />
+    <MESSAGE value="Added new columns" />
+    <MESSAGE value="Added new container to Docker and new files" />
+    <MESSAGE value="Updated README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated README.md" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ClassCastException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
